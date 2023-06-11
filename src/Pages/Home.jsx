@@ -1,9 +1,10 @@
 import React from 'react';
+import houseImage from '../Pages/house.png';
 
 const RESILINK = () => {
   return (
     <>
-       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand" href="#">
           RESILINK
         </a>
@@ -26,7 +27,7 @@ const RESILINK = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/listing">
+              <a className="nav-link" href="/listproperty">
                 List Property
               </a>
             </li>
@@ -46,50 +47,96 @@ const RESILINK = () => {
 
       <div className="container mt-5">
         <div className="row">
-          <div className="col-md-4 mb-3">
-            <div className="card">
-              <div className="card-header">Filters</div>
-              <div className="card-body">
-                <div className="form-group">
-                  <label htmlFor="filterInput">Filter Property</label>
+          <div className="col-md-12">
+            <div className="form-group d-flex justify-content-between align-items-center">
+              <div className="d-flex align-items-center">
+                <label htmlFor="searchInput" className="mr-2">Search Property</label>
+                <div className="input-group">
                   <input
                     type="text"
                     className="form-control"
-                    id="filterInput"
+                    id="searchInput"
                     placeholder="Enter keywords"
                   />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-8">
-            <div className="form-group">
-              <label htmlFor="sortBy">Sort By</label>
-              <select className="form-control" id="sortBy">
-                <option value="price_asc">Price (Low to High)</option>
-                <option value="price_desc">Price (High to Low)</option>
-                <option value="bhk_asc">BHK (Low to High)</option>
-                <option value="bhk_desc">BHK (High to Low)</option>
-              </select>
-            </div>
-            <div className="row">
-              <div className="col-md-4 mb-3">
-                <div className="card">
-                  <img
-                    src="house.png"
-                    className="card-img-top"
-                    alt="Property Image"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">Property 1</h5>
-                    <p className="card-text">Property description goes here.</p>
-                    <a href="#" className="btn btn-primary">
-                      View Details
-                    </a>
+                  <div className="input-group-append">
+                    <button className="btn btn-primary" type="button">
+                      Search
+                    </button>
                   </div>
                 </div>
               </div>
-              {/* Repeat the card code for the remaining properties */}
+              <div className="d-flex align-items-center">
+                <select className="form-control mr-3" id="sortBy">
+                  <option value="price_asc">Price (Low to High)</option>
+                  <option value="price_desc">Price (High to Low)</option>
+                </select>
+              </div>
+              <div className="d-flex align-items-center">
+                <select className="form-control mr-3" id="cityFilter">
+                  <option value="">Cities</option>
+                  <option value="city1">City 1</option>
+                  <option value="city2">City 2</option>
+                  {/* Add more city options as needed */}
+                </select>
+              </div>
+              <div className="d-flex align-items-center">
+                <select className="form-control" id="typeFilter">
+                  <option value="">Property Type</option>
+                  <option value="type1">Type 1</option>
+                  <option value="type2">Type 2</option>
+                  {/* Add more property type options as needed */}
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-4 mb-3">
+            <div className="card">
+              <img
+                src={houseImage}
+                className="card-img-top"
+                alt="Property Image"
+              />
+              <div className="card-body">
+                <h5 className="card-title">Property 1</h5>
+                <p className="card-text">Property description goes here.</p>
+                <a href="#" className="btn btn-primary">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4 mb-3">
+            <div className="card">
+              <img
+                src={houseImage}
+                className="card-img-top"
+                alt="Property Image"
+              />
+              <div className="card-body">
+                <h5 className="card-title">Property 2</h5>
+                <p className="card-text">Property description goes here.</p>
+                <a href="#" className="btn btn-primary">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4 mb-3">
+            <div className="card">
+              <img
+                src={houseImage}
+                className="card-img-top"
+                alt="Property Image"
+              />
+              <div className="card-body">
+                <h5 className="card-title">Property 2</h5>
+                <p className="card-text">Property description goes here.</p>
+                <a href="#" className="btn btn-primary">
+                  View Details
+                </a>
+              </div>
             </div>
           </div>
         </div>

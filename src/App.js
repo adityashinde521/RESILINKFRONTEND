@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Router } from 'react-router-dom';
 import Login from './Pages/Login';
 import Home from './Pages/Home';
 import SignUp from './Pages/SignUp';
+import ListProperty from './Pages/ListProperty';
 
 
 function App() {
@@ -14,13 +15,15 @@ function App() {
 
         <Routes>
 
-          <Route path="/" element={<Login/>} />
+          <Route path="/" element={<Home/>} />
 
           <Route path="/login" element={<Login/>} />
 
           <Route path="/signup" element={<SignUp/>} />
 
           <Route path="/home" element={<Home/>} />
+          
+          <Route path="/listproperty" element={<ListProperty/>} />
 
         </Routes>
 

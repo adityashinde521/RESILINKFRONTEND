@@ -72,7 +72,7 @@ const Login = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/listing">
+              <a className="nav-link" href="/listproperty">
                 List Property
               </a>
             </li>
